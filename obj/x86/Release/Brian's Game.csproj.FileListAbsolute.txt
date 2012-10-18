@@ -1,0 +1,13 @@
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Content\star_red.xnb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Content\space_empty.xnb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Content\space_emptytiled.xnb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Content\ship.xnb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Content\ship1.xnb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Content\scoutship.xnb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Content\SpriteFont1.xnb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Brian's Game.exe
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\bin\x86\Release\Brian's Game.pdb
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\obj\x86\Release\Brian's Game.exe
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\obj\x86\Release\Brian's Game.pdb

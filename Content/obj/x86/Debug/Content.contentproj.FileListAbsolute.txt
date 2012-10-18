@@ -1,0 +1,3 @@
+C:\Documents and Settings\Owner\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Brian\My Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Brian\Documents\Visual Studio 2008\Projects\Brian's Game\Brian's Game\Content\obj\x86\Debug\ResolveAssemblyReference.cache
