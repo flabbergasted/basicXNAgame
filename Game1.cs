@@ -71,7 +71,7 @@ namespace Brian_s_Game
             v.Width = graphics.GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = graphics.GraphicsDevice.DisplayMode.Height;
             graphics.PreferredBackBufferWidth = graphics.GraphicsDevice.DisplayMode.Width;
-            graphics.GraphicsDevice.Viewport = v;
+            //graphics.GraphicsDevice.Viewport = v;
             graphics.ToggleFullScreen();
             base.Initialize();
         }
@@ -175,31 +175,34 @@ namespace Brian_s_Game
         {
             if (movelist.Count != 0)
             {
-                Ship temp = (Ship)movelist.ElementAt(0);
-                if (temp.getPosition().X != temp.destination.X)
+                for (int i = 0; i < movelist.Count; i++)
                 {
-                    if ((temp.getPosition().X < temp.destination.X - .02 | temp.getPosition().X > temp.destination.X + .02))
+                    Ship temp = (Ship)movelist.ElementAt(i);
+                    if (temp.getPosition().X != temp.destination.X)
                     {
-                        Vector2 direction = DirectionVector(temp.getPosition(), temp.destination);
-                        temp.setPosition(temp.getPosition() + (direction * (float)gameTime.ElapsedGameTime.TotalSeconds));
+                        if ((temp.getPosition().X < temp.destination.X - .02 | temp.getPosition().X > temp.destination.X + .02))
+                        {
+                            Vector2 direction = DirectionVector(temp.getPosition(), temp.destination);
+                            temp.setPosition(temp.getPosition() + (direction * (float)gameTime.ElapsedGameTime.TotalSeconds));
+                        }
+                        else
+                        {
+                            temp.setPosition(temp.destination);
+                            movelist.Remove(temp);
+                        }
                     }
                     else
                     {
-                        temp.setPosition(temp.destination);
-                        movelist.Remove(temp);
-                    }
-                }
-                else
-                {
-                    if ((temp.getPosition().Y < temp.destination.Y - .02 | temp.getPosition().Y > temp.destination.Y + .02))
-                    {
-                        Vector2 direction = DirectionVector(temp.getPosition(), temp.destination);
-                        temp.setPosition(temp.getPosition() + (direction * (float)gameTime.ElapsedGameTime.TotalSeconds));
-                    }
-                    else
-                    {
-                        temp.setPosition(temp.destination);
-                        movelist.Remove(temp);
+                        if ((temp.getPosition().Y < temp.destination.Y - .02 | temp.getPosition().Y > temp.destination.Y + .02))
+                        {
+                            Vector2 direction = DirectionVector(temp.getPosition(), temp.destination);
+                            temp.setPosition(temp.getPosition() + (direction * (float)gameTime.ElapsedGameTime.TotalSeconds));
+                        }
+                        else
+                        {
+                            temp.setPosition(temp.destination);
+                            movelist.Remove(temp);
+                        }
                     }
                 }
             }
@@ -387,12 +390,12 @@ namespace Brian_s_Game
                             }*/
                             try
                             {
-                                if (movelist.Count == 0)
-                                {
-                                    selectedinfo = objectboard[x, y].getInfo();
-                                    objectselected = objectboard[x, y];
-                                    selected = true;
-                                }
+                                //if (movelist.Count == 0)
+                                //{
+                                selectedinfo = objectboard[x, y].getInfo();
+                                objectselected = objectboard[x, y];
+                                selected = true;
+                                //}
                             }
                             catch (Exception e)
                             {
@@ -433,13 +436,13 @@ namespace Brian_s_Game
                 for (int j = 0; j < 13; j++){
                     if (board[i,j] == 1){
                         Vector2 pos = new Vector2(i*64,j*64);
-                        spriteBatch.Begin(SpriteBlendMode.AlphaBlend);
+                        spriteBatch.Begin();
                         spriteBatch.Draw(sun, pos, Color.White);
                         spriteBatch.End();
                     }
                     else{
                         Vector2 pos = new Vector2(i*64, j*64);
-                        spriteBatch.Begin(SpriteBlendMode.AlphaBlend);
+                        spriteBatch.Begin();
                         if (tiled == 1)
                         {
                             spriteBatch.Draw(spacetiled, pos, Color.White);
@@ -451,7 +454,7 @@ namespace Brian_s_Game
                         spriteBatch.End();
                     }
                 }
-                spriteBatch.Begin(SpriteBlendMode.AlphaBlend);
+                spriteBatch.Begin();
                 Vector2 displayPos = new Vector2(10, graphics.GraphicsDevice.DisplayMode.Height - 30);
                 Vector2 descPos = new Vector2(110, graphics.GraphicsDevice.DisplayMode.Height - 30);
                 Vector2 miscPos = new Vector2(400, graphics.GraphicsDevice.DisplayMode.Height - 30);
